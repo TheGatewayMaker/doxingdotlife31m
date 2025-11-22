@@ -156,10 +156,10 @@ export default function Index() {
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-background via-card to-background pt-16 pb-12 md:pt-24 md:pb-20 border-b border-border/50">
           <div className="max-w-5xl mx-auto px-4">
-            <h1 className="text-6xl md:text-7xl font-black mb-3 text-foreground tracking-tighter leading-none">
+            <h1 className="text-6xl md:text-7xl font-black mb-4 text-foreground tracking-tighter leading-none">
               Doxing Dot Life
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl">
+            <p className="text-2xl md:text-3xl font-bold text-foreground mb-12 max-w-3xl">
               Find if you or someone you know have been Doxed
             </p>
 
