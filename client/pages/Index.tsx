@@ -3,22 +3,7 @@ import { Search, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-interface Post {
-  id: string;
-  title: string;
-  description: string;
-  country?: string;
-  city?: string;
-  server?: string;
-  thumbnail?: string;
-  createdAt: string;
-}
-
-interface PostsResponse {
-  posts: Post[];
-  total: number;
-}
+import { Post, PostsResponse } from "@shared/api";
 
 const COUNTRIES = [
   "Afghanistan",
@@ -361,9 +346,10 @@ export default function Index() {
       try {
         const response = await fetch("/api/posts");
         const data: PostsResponse = await response.json();
-        setPosts(data.posts);
+        setPosts(Array.isArray(data.posts) ? data.posts : []);
       } catch (error) {
         console.error("Error loading posts:", error);
+        setPosts([]);
       }
     };
 
@@ -371,9 +357,10 @@ export default function Index() {
       try {
         const response = await fetch("/api/servers");
         const data = await response.json();
-        setServers(data.servers || []);
+        setServers(Array.isArray(data.servers) ? data.servers : []);
       } catch (error) {
         console.error("Error loading servers:", error);
+        setServers([]);
       }
     };
 
