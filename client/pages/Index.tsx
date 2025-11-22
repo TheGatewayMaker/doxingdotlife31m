@@ -229,9 +229,8 @@ export default function Index() {
                 </div>
 
                 {/* City Dropdown */}
-                {selectedCountry && (
-                  <div className="relative group">
-                    <label className="text-xs font-semibold text-muted-foreground block mb-2">
+                <div className="relative group">
+                    <label className="text-sm font-bold text-foreground block mb-2">
                       By City
                     </label>
                     <input
@@ -273,12 +272,10 @@ export default function Index() {
                       </button>
                     )}
                   </div>
-                )}
 
                 {/* Server Dropdown */}
-                {servers.length > 0 && (
-                  <div className="relative group">
-                    <label className="text-xs font-semibold text-muted-foreground block mb-2">
+                <div className="relative group">
+                    <label className="text-sm font-bold text-foreground block mb-2">
                       By Server
                     </label>
                     <input
@@ -320,7 +317,6 @@ export default function Index() {
                       </button>
                     )}
                   </div>
-                )}
               </div>
             </div>
           </div>
