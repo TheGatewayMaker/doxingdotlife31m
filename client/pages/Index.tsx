@@ -440,7 +440,7 @@ export default function Index() {
 
             {/* Search Bar */}
             <div
-              className="relative mb-10 animate-fadeIn"
+              className="relative mb-8 animate-fadeIn"
               style={{ animationDelay: "0.2s" }}
             >
               <input
@@ -448,9 +448,9 @@ export default function Index() {
                 placeholder="Search for individuals..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-card border-2 border-border hover:border-accent/50 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent text-base sm:text-lg transition-all shadow-md hover:shadow-lg"
+                className="w-full px-4 sm:px-5 py-3 sm:py-3.5 bg-card border-2 border-border hover:border-accent/50 rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent text-sm sm:text-base transition-all shadow-md hover:shadow-lg"
               />
-              <SearchIcon className="absolute right-4 sm:right-5 top-1/2 transform -translate-y-1/2 w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground pointer-events-none" />
+              <SearchIcon className="absolute right-4 sm:right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
             </div>
 
             {/* Categories Section */}
@@ -693,7 +693,7 @@ export default function Index() {
                               errorDiv.className =
                                 "text-center text-muted-foreground flex flex-col items-center justify-center gap-2";
                               errorDiv.innerHTML =
-                                '<div class="text-3xl">🖼️</div><div class="text-xs">Image unavailable</div>';
+                                '<div class="text-3xl">���️</div><div class="text-xs">Image unavailable</div>';
                               parent.appendChild(errorDiv);
                             }
                           }}
