@@ -118,9 +118,9 @@ export default function UppostPanel() {
     setUploadError("");
     setUploadMessage("");
 
-    if (!title || !description || !media || !thumbnail) {
+    if (!title || !description || mediaFiles.length === 0 || !thumbnail) {
       setUploadError(
-        "Please fill in all required fields including thumbnail and media",
+        "Please fill in all required fields including thumbnail and at least one media file",
       );
       return;
     }
@@ -132,7 +132,10 @@ export default function UppostPanel() {
     formData.append("city", city);
     formData.append("server", server);
     formData.append("thumbnail", thumbnail);
-    formData.append("media", media);
+
+    mediaFiles.forEach((file) => {
+      formData.append("media", file);
+    });
 
     setUploading(true);
 
