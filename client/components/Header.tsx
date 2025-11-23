@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { SearchIcon, HomeIcon } from "@/components/Icons";
+import { HomeIcon } from "@/components/Icons";
 
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
