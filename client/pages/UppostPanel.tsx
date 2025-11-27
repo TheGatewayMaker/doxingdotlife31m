@@ -610,7 +610,7 @@ export default function UppostPanel() {
             <button
               type="submit"
               disabled={uploading}
-              className="w-full px-4 py-4 bg-accent text-accent-foreground font-bold rounded-lg hover:bg-accent/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+              className="w-full px-4 py-4 bg-gradient-to-r from-accent to-accent/90 text-accent-foreground font-bold rounded-xl hover:shadow-2xl hover:shadow-accent/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95 shadow-lg flex items-center justify-center gap-2"
             >
               <UploadIcon className="w-5 h-5" />
               {uploading ? "Uploading..." : "Upload Post"}
