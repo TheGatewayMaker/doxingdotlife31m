@@ -189,23 +189,58 @@ html {
 
 @keyframes borderRotate {
   0% {
-    border-image-source: linear-gradient(90deg, #3b82f6 0%, #3b82f6 25%, transparent 50%, #3b82f6 75%, #3b82f6 100%);
+    border-image-source: linear-gradient(
+      90deg,
+      #3b82f6 0%,
+      #3b82f6 25%,
+      transparent 50%,
+      #3b82f6 75%,
+      #3b82f6 100%
+    );
     background-position: 0% 0%;
   }
   25% {
-    border-image-source: linear-gradient(180deg, #3b82f6 0%, #3b82f6 25%, transparent 50%, #3b82f6 75%, #3b82f6 100%);
+    border-image-source: linear-gradient(
+      180deg,
+      #3b82f6 0%,
+      #3b82f6 25%,
+      transparent 50%,
+      #3b82f6 75%,
+      #3b82f6 100%
+    );
     background-position: 100% 0%;
   }
   50% {
-    border-image-source: linear-gradient(270deg, #3b82f6 0%, #3b82f6 25%, transparent 50%, #3b82f6 75%, #3b82f6 100%);
+    border-image-source: linear-gradient(
+      270deg,
+      #3b82f6 0%,
+      #3b82f6 25%,
+      transparent 50%,
+      #3b82f6 75%,
+      #3b82f6 100%
+    );
     background-position: 100% 100%;
   }
   75% {
-    border-image-source: linear-gradient(0deg, #3b82f6 0%, #3b82f6 25%, transparent 50%, #3b82f6 75%, #3b82f6 100%);
+    border-image-source: linear-gradient(
+      0deg,
+      #3b82f6 0%,
+      #3b82f6 25%,
+      transparent 50%,
+      #3b82f6 75%,
+      #3b82f6 100%
+    );
     background-position: 0% 100%;
   }
   100% {
-    border-image-source: linear-gradient(90deg, #3b82f6 0%, #3b82f6 25%, transparent 50%, #3b82f6 75%, #3b82f6 100%);
+    border-image-source: linear-gradient(
+      90deg,
+      #3b82f6 0%,
+      #3b82f6 25%,
+      transparent 50%,
+      #3b82f6 75%,
+      #3b82f6 100%
+    );
     background-position: 0% 0%;
   }
 }

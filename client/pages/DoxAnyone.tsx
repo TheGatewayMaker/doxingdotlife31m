@@ -32,34 +32,22 @@ export default function DoxAnyone() {
                 <p className="text-xs font-semibold text-blue-400 mb-1">
                   PAKISTAN
                 </p>
-                <p className="text-xl font-bold text-blue-500">
-                  299
-                </p>
-                <p className="text-xs text-blue-400 font-semibold">
-                  PKR
-                </p>
+                <p className="text-xl font-bold text-blue-500">299</p>
+                <p className="text-xs text-blue-400 font-semibold">PKR</p>
               </div>
               <div className="bg-slate-900 rounded-lg p-4 border border-blue-500 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
                 <p className="text-xs font-semibold text-blue-400 mb-1">
                   UNITED STATES
                 </p>
-                <p className="text-xl font-bold text-blue-500">
-                  1.10
-                </p>
-                <p className="text-xs text-blue-400 font-semibold">
-                  USD
-                </p>
+                <p className="text-xl font-bold text-blue-500">1.10</p>
+                <p className="text-xs text-blue-400 font-semibold">USD</p>
               </div>
               <div className="bg-slate-900 rounded-lg p-4 border border-blue-500 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
                 <p className="text-xs font-semibold text-blue-400 mb-1">
                   INDIA
                 </p>
-                <p className="text-xl font-bold text-blue-500">
-                  99
-                </p>
-                <p className="text-xs text-blue-400 font-semibold">
-                  INR
-                </p>
+                <p className="text-xl font-bold text-blue-500">99</p>
+                <p className="text-xs text-blue-400 font-semibold">INR</p>
               </div>
             </div>
           </div>

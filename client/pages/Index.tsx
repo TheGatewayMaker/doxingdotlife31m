@@ -584,7 +584,9 @@ export default function Index() {
                   <div className="relative">
                     <input
                       type="text"
-                      placeholder={selectedCity ? selectedCity : "Select city..."}
+                      placeholder={
+                        selectedCity ? selectedCity : "Select city..."
+                      }
                       value={citySearch}
                       onChange={(e) => setCitySearch(e.target.value)}
                       className="w-full px-4 py-3 pr-10 bg-slate-800 border border-slate-700 hover:border-blue-500 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all shadow-sm hover:shadow-md hover:shadow-blue-500/20"
