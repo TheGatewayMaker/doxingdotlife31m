@@ -144,10 +144,10 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-700 pt-8 sm:pt-10">
-          <div className="text-center text-xs sm:text-sm text-gray-600">
+        <div className="border-t border-[#666666] pt-8 sm:pt-10">
+          <div className="text-center text-xs sm:text-sm text-[#666666]">
             <p>&copy; 2024 - 2027 Doxing Dot Life. All rights reserved.</p>
-            <p className="mt-2 text-gray-700">
+            <p className="mt-2 text-[#666666]">
               Find, Dox, Expose - The Database
             </p>
           </div>
