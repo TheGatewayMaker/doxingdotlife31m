@@ -1,6 +1,7 @@
 import { Copy, Check } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { GlobeIcon, MapPinIcon, ServerIcon } from "@/components/Icons";
 
 interface PostDescriptionSectionProps {
   description: string;
