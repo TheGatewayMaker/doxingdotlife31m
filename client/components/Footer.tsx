@@ -37,14 +37,14 @@ export default function Footer() {
           </div>
           <div className="animate-fadeIn" style={{ animationDelay: "0.2s" }}>
             <h4 className="font-bold text-white mb-4 flex items-center gap-2 text-sm uppercase tracking-wider">
-              <LinkIcon className="w-4 h-4 text-blue-400" />
+              <LinkIcon className="w-4 h-4 text-gray-500" />
               Navigation
             </h4>
-            <ul className="space-y-2.5 text-sm text-gray-400">
+            <ul className="space-y-2.5 text-sm text-gray-500">
               <li>
                 <a
                   href="/"
-                  className="hover:text-blue-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <HomeIcon className="w-4 h-4" />
                   <span>Home</span>
@@ -53,7 +53,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/all-posts"
-                  className="hover:text-blue-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <SearchAltIcon className="w-4 h-4" />
                   <span>Browse Database</span>
@@ -62,7 +62,7 @@ export default function Footer() {
               <li>
                 <a
                   href="/dox-anyone"
-                  className="hover:text-blue-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <MessageIcon className="w-4 h-4" />
                   <span>Search Tool</span>
@@ -72,14 +72,14 @@ export default function Footer() {
           </div>
           <div className="animate-fadeIn" style={{ animationDelay: "0.3s" }}>
             <h4 className="font-bold text-white mb-4 flex items-center gap-2 text-sm uppercase tracking-wider">
-              <FileTextIcon className="w-4 h-4 text-blue-400" />
+              <FileTextIcon className="w-4 h-4 text-gray-500" />
               Legal
             </h4>
-            <ul className="space-y-2.5 text-sm text-gray-400">
+            <ul className="space-y-2.5 text-sm text-gray-500">
               <li>
                 <a
                   href="#"
-                  className="hover:text-blue-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <FileTextIcon className="w-4 h-4" />
                   <span>Privacy Policy</span>
@@ -88,7 +88,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-blue-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <ScaleIcon className="w-4 h-4" />
                   <span>Terms of Service</span>
@@ -97,7 +97,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-blue-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <AlertIcon className="w-4 h-4" />
                   <span>Disclaimer</span>
@@ -107,14 +107,14 @@ export default function Footer() {
           </div>
           <div className="animate-fadeIn" style={{ animationDelay: "0.4s" }}>
             <h4 className="font-bold text-white mb-4 flex items-center gap-2 text-sm uppercase tracking-wider">
-              <ShoppingCartIcon className="w-4 h-4 text-blue-400" />
+              <ShoppingCartIcon className="w-4 h-4 text-gray-500" />
               Support
             </h4>
-            <ul className="space-y-2.5 text-sm text-gray-400">
+            <ul className="space-y-2.5 text-sm text-gray-500">
               <li>
                 <a
                   href="#"
-                  className="hover:text-blue-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <CreditCardIcon className="w-4 h-4" />
                   <span>Premium Access</span>
@@ -123,7 +123,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-blue-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <PhoneIcon className="w-4 h-4" />
                   <span>Contact</span>
@@ -132,7 +132,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#"
-                  className="hover:text-blue-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="hover:text-gray-300 transition-colors duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <MailIcon className="w-4 h-4" />
                   <span>Report Issue</span>
@@ -141,10 +141,10 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-blue-500/20 pt-8 sm:pt-10">
-          <div className="text-center text-xs sm:text-sm text-gray-500">
+        <div className="border-t border-gray-700 pt-8 sm:pt-10">
+          <div className="text-center text-xs sm:text-sm text-gray-600">
             <p>&copy; 2024 - 2027 Doxing Dot Life. All rights reserved.</p>
-            <p className="mt-2 text-gray-600">Designed & Built with Professionalism</p>
+            <p className="mt-2 text-gray-700">Find, Dox, Expose - The Database</p>
           </div>
         </div>
       </div>
