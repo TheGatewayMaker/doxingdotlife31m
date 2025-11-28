@@ -7,6 +7,7 @@
   # global function options (directory and bundler)
   directory = "netlify/functions"
   node_bundler = "esbuild"
+  timeout = 300 # 5 minutes for uploads
 
 # Redirect API calls to Netlify Functions (rewrite)
 [[redirects]]
