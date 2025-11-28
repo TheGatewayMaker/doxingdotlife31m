@@ -166,11 +166,11 @@ export default function PostDetail() {
 
             {/* Thumbnail */}
             {post.thumbnail && !thumbnailError && (
-              <div className="mb-8 rounded-xl overflow-hidden border border-border shadow-lg animate-fadeIn">
+              <div className="mb-8 rounded-xl overflow-hidden border border-border shadow-lg animate-fadeIn max-w-2xl mx-auto">
                 <img
                   src={post.thumbnail}
                   alt={post.title}
-                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto object-cover"
                   onError={() => setThumbnailError(true)}
                   crossOrigin="anonymous"
                 />
