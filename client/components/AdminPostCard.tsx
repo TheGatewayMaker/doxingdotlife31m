@@ -122,14 +122,40 @@ export default function AdminPostCard({
             )}
           </div>
 
+          {/* Trend Information */}
+          {post.isTrend && (
+            <div className="px-3 py-2 bg-amber-900/20 border border-amber-600/40 rounded-lg mb-4">
+              <div className="flex items-center gap-2 mb-1">
+                <svg
+                  className="w-3 h-3 text-amber-400"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <p className="text-xs font-bold text-amber-400">Trending</p>
+              </div>
+              <p className="text-xs text-amber-300">
+                Rank: #{post.trendRank || "N/A"}
+              </p>
+            </div>
+          )}
+
           {/* Action Buttons */}
           <div className="flex gap-2">
             <button
-              onClick={() => setShowMediaModal(true)}
+              onClick={() => setShowEditModal(true)}
               className="flex-1 px-3 py-2 bg-blue-600 text-white font-medium text-xs rounded-lg hover:bg-blue-700 transition-all flex items-center justify-center gap-1.5 active:scale-95"
             >
+              <EditIcon className="w-4 h-4" />
+              Edit
+            </button>
+            <button
+              onClick={() => setShowMediaModal(true)}
+              className="flex-1 px-3 py-2 bg-green-600 text-white font-medium text-xs rounded-lg hover:bg-green-700 transition-all flex items-center justify-center gap-1.5 active:scale-95"
+            >
               <ImageIcon className="w-4 h-4" />
-              Media ({post.mediaFiles.length})
+              Media
             </button>
             <button
               onClick={() => onDelete(post.id)}
