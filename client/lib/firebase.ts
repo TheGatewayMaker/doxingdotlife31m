@@ -110,6 +110,12 @@ export const signInWithGoogle = async (): Promise<User> => {
  * Sign out the current user
  */
 export const signOutUser = async (): Promise<void> => {
+  if (!auth) {
+    throw new Error(
+      "Firebase is not initialized. Please configure Firebase environment variables.",
+    );
+  }
+
   try {
     await signOut(auth);
   } catch (error) {
