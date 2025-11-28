@@ -23,13 +23,12 @@ const isFirebaseConfigValid = Object.values(firebaseConfig).every(
   (val) => val && val !== undefined && val !== "",
 );
 
-let app: any;
 let auth: Auth | null = null;
 let googleProvider: GoogleAuthProvider | null = null;
 
 if (isFirebaseConfigValid) {
   try {
-    app = initializeApp(firebaseConfig);
+    const app = initializeApp(firebaseConfig);
     auth = getAuth(app);
 
     googleProvider = new GoogleAuthProvider();
