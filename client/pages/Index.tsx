@@ -581,13 +581,27 @@ export default function Index() {
                     <MapPinIcon className="w-4 h-4 text-blue-400" />
                     By City
                   </label>
-                  <input
-                    type="text"
-                    placeholder={selectedCity ? selectedCity : "Select city..."}
-                    value={citySearch}
-                    onChange={(e) => setCitySearch(e.target.value)}
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 hover:border-blue-500 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all shadow-sm hover:shadow-md hover:shadow-blue-500/20"
-                  />
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder={selectedCity ? selectedCity : "Select city..."}
+                      value={citySearch}
+                      onChange={(e) => setCitySearch(e.target.value)}
+                      className="w-full px-4 py-3 pr-10 bg-slate-800 border border-slate-700 hover:border-blue-500 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all shadow-sm hover:shadow-md hover:shadow-blue-500/20"
+                    />
+                    {selectedCity && (
+                      <button
+                        onClick={() => {
+                          setSelectedCity("");
+                          setCitySearch("");
+                        }}
+                        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-accent hover:text-accent/80 transition-colors hover:scale-110"
+                        title="Clear selection"
+                      >
+                        <CloseIcon className="w-5 h-5" />
+                      </button>
+                    )}
+                  </div>
                   {citySearch && (
                     <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-slate-700 rounded-lg z-[999] max-h-48 overflow-y-auto shadow-lg">
                       {availableCities.length > 0 ? (
@@ -609,18 +623,6 @@ export default function Index() {
                         </div>
                       )}
                     </div>
-                  )}
-                  {selectedCity && (
-                    <button
-                      onClick={() => {
-                        setSelectedCity("");
-                        setCitySearch("");
-                      }}
-                      className="absolute top-3 right-3 text-accent hover:text-accent/80 transition-colors"
-                      title="Clear selection"
-                    >
-                      <CloseIcon className="w-4 h-4" />
-                    </button>
                   )}
                 </div>
 
