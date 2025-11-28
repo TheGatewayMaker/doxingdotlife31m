@@ -51,24 +51,31 @@ export default function Header() {
             <HomeIcon className="w-5 h-5" />
             Home
           </Link>
-          <div className="relative group">
+          <Link
+            to="/dox-anyone"
+            className="relative flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:to-blue-800 transition-all overflow-hidden"
+          >
             <div
-              className="absolute inset-0 rounded-lg blur-sm pointer-events-none"
+              className="absolute inset-0 rounded-lg pointer-events-none"
               style={{
-                background: "conic-gradient(from 270deg, #3b82f6, #60a5fa, #3b82f6)",
-                animation: "borderRotate 4s linear infinite reverse",
+                background: `conic-gradient(
+                  from 0deg,
+                  transparent 0deg,
+                  transparent 45deg,
+                  #60a5fa 50deg,
+                  #3b82f6 55deg,
+                  #60a5fa 60deg,
+                  transparent 65deg,
+                  transparent 360deg
+                )`,
+                animation: "snakeLight 3s linear infinite reverse",
               }}
             />
-            <Link
-              to="/dox-anyone"
-              className="relative flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:to-blue-800 transition-all"
-            >
-              <SearchAltIcon className="w-4 h-4" />
-              Dox Anyone
-            </Link>
-          </div>
+            <SearchAltIcon className="w-4 h-4 relative z-10" />
+            <span className="relative z-10">Dox Anyone</span>
+          </Link>
           <style>{`
-            @keyframes borderRotate {
+            @keyframes snakeLight {
               0% { transform: rotate(0deg); }
               100% { transform: rotate(360deg); }
             }
