@@ -315,23 +315,42 @@ export const uploadPostMetadataWithThumbnail = async (
   metadata: PostMetadata,
   thumbnailUrl: string,
 ): Promise<void> => {
-  const client = getR2Client();
-  const bucketName = getBucketName();
-  const key = `posts/${postId}/metadata.json`;
+  try {
+    const client = getR2Client();
+    const bucketName = getBucketName();
+    const key = `posts/${postId}/metadata.json`;
 
-  const metadataWithThumbnail: PostMetadataWithThumbnail = {
-    ...metadata,
-    thumbnail: thumbnailUrl,
-  };
+    const metadataWithThumbnail: PostMetadataWithThumbnail = {
+      ...metadata,
+      thumbnail: thumbnailUrl,
+    };
 
-  await client.send(
-    new PutObjectCommand({
-      Bucket: bucketName,
-      Key: key,
-      Body: JSON.stringify(metadataWithThumbnail, null, 2),
-      ContentType: "application/json",
-    }),
-  );
+    console.log(
+      `[${new Date().toISOString()}] Uploading metadata for post ${postId}`,
+    );
+
+    await client.send(
+      new PutObjectCommand({
+        Bucket: bucketName,
+        Key: key,
+        Body: JSON.stringify(metadataWithThumbnail, null, 2),
+        ContentType: "application/json",
+      }),
+    );
+
+    console.log(
+      `[${new Date().toISOString()}] ✅ Metadata uploaded successfully for post ${postId}`,
+    );
+  } catch (error) {
+    const errorMsg = error instanceof Error ? error.message : String(error);
+    console.error(
+      `Failed to upload metadata for post ${postId}:`,
+      errorMsg,
+    );
+    throw new Error(
+      `Failed to upload post metadata to R2 storage: ${errorMsg}`,
+    );
+  }
 };
 
 export interface PostWithThumbnail extends PostMetadata {
