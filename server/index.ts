@@ -4,7 +4,7 @@ import cors from "cors";
 import multer from "multer";
 import { handleDemo } from "./routes/demo";
 import { handleUpload } from "./routes/upload";
-import { handleGetPosts } from "./routes/posts";
+import { handleGetPosts, handleDeletePost } from "./routes/posts";
 import { handleGetServers } from "./routes/servers";
 
 const upload = multer({
