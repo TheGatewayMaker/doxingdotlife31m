@@ -233,10 +233,7 @@ export function createServer() {
     authMiddleware,
     // Pre-check: Validate request size early, especially for Netlify Functions
     (req, res, next) => {
-      const contentLength = parseInt(
-        req.headers["content-length"] || "0",
-        10,
-      );
+      const contentLength = parseInt(req.headers["content-length"] || "0", 10);
       const isNetlify = process.env.NETLIFY === "true";
       // Netlify Functions have practical limits around 250MB for the entire request
       // but real-world performance degrades significantly above 50MB

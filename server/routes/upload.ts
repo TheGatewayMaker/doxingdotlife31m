@@ -242,7 +242,10 @@ export const handleUpload: RequestHandler = async (req, res, next) => {
         } catch (fileError) {
           const errorMsg =
             fileError instanceof Error ? fileError.message : String(fileError);
-          console.error(`[${new Date().toISOString()}] Error uploading file ${i + 1}:`, errorMsg);
+          console.error(
+            `[${new Date().toISOString()}] Error uploading file ${i + 1}:`,
+            errorMsg,
+          );
           uploadErrors.push({
             index: i + 1,
             error: errorMsg,
