@@ -1,6 +1,7 @@
 [build]
   command = "npm run build"
   publish = "dist/spa"
+  # optional: Netlify also supports setting a default functions directory here
   functions = "netlify/functions"
 
 [functions]
@@ -9,7 +10,8 @@
   included_files = ["server/**/*", "shared/**/*"]
   timeout = 26
 
-[[function]]
+# Per-function overrides — note the table name is `[[functions]]` (plural)
+[[functions]]
   name = "api"
   timeout = 26
   memory = 3008
