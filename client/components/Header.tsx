@@ -133,20 +133,22 @@ export default function Header() {
           <>
             {/* Overlay */}
             <div
-              className="fixed inset-0 bg-black/70 z-30 lg:hidden"
+              className="fixed inset-0 bg-black/50 z-30 lg:hidden"
               onClick={closeSidebar}
+              role="presentation"
+              aria-hidden="true"
             />
 
             {/* Sidebar */}
             <div
-              className="fixed left-0 top-16 bottom-0 w-64 sm:w-72 bg-[#000000] border-r border-[#666666] lg:hidden z-40 animate-slideInLeft shadow-2xl flex flex-col"
-              style={{ animationDuration: "0.4s" }}
+              className="fixed left-0 top-16 right-0 max-h-[calc(100vh-4rem)] w-full bg-[#0a0a0a] border-b border-[#666666] lg:hidden z-40 animate-slideInDown shadow-2xl flex flex-col overflow-hidden"
+              style={{ animationDuration: "0.3s" }}
             >
-              <nav className="p-4 space-y-2 overflow-y-auto flex-1">
+              <nav className="p-4 space-y-1 overflow-y-auto flex-1">
                 <Link
                   to="/"
                   onClick={closeSidebar}
-                  className="flex items-center gap-3 w-full px-4 py-3 text-[#979797] font-semibold hover:bg-[#666666]/30 hover:text-white rounded-lg transition-all duration-200"
+                  className="flex items-center gap-3 w-full px-4 py-3 text-[#979797] font-semibold hover:bg-[#666666]/40 hover:text-white rounded-lg transition-all duration-200 active:bg-[#666666]/60"
                 >
                   <HomeIcon className="w-5 h-5 flex-shrink-0" />
                   <span>Home</span>
@@ -154,7 +156,7 @@ export default function Header() {
                 <Link
                   to="/all-posts"
                   onClick={closeSidebar}
-                  className="flex items-center gap-3 w-full px-4 py-3 text-[#979797] font-semibold hover:bg-[#666666]/30 hover:text-white rounded-lg transition-all duration-200"
+                  className="flex items-center gap-3 w-full px-4 py-3 text-[#979797] font-semibold hover:bg-[#666666]/40 hover:text-white rounded-lg transition-all duration-200 active:bg-[#666666]/60"
                 >
                   <span className="text-lg">📋</span>
                   <span>All Posts</span>
@@ -162,19 +164,19 @@ export default function Header() {
                 <Link
                   to="/dox-anyone"
                   onClick={closeSidebar}
-                  className="flex items-center gap-3 w-full px-4 py-3 text-white font-semibold hover:bg-[#0077BB] rounded-lg transition-all duration-200 bg-[#0088CC]"
+                  className="flex items-center gap-3 w-full px-4 py-3 text-white font-semibold hover:bg-[#0077BB] rounded-lg transition-all duration-200 bg-[#0088CC] active:bg-[#0066AA]"
                 >
                   <SearchAltIcon className="w-5 h-5 flex-shrink-0" />
                   <span>Dox Now</span>
                 </Link>
                 {isAuthenticated && (
                   <>
-                    <div className="my-2 border-t border-[#666666]" />
+                    <div className="my-3 border-t border-[#666666]" />
                     {location.pathname !== "/uppostpanel" && (
                       <Link
                         to="/uppostpanel"
                         onClick={closeSidebar}
-                        className="flex items-center gap-3 w-full px-4 py-3 bg-purple-600 text-white font-semibold hover:bg-purple-700 rounded-lg transition-all duration-200"
+                        className="flex items-center gap-3 w-full px-4 py-3 bg-purple-600 text-white font-semibold hover:bg-purple-700 rounded-lg transition-all duration-200 active:bg-purple-800"
                       >
                         <UploadIcon className="w-5 h-5 flex-shrink-0" />
                         <span>Upload Post</span>
@@ -184,7 +186,7 @@ export default function Header() {
                       <Link
                         to="/admin-panel"
                         onClick={closeSidebar}
-                        className="flex items-center gap-3 w-full px-4 py-3 bg-amber-600 text-white font-semibold hover:bg-amber-700 rounded-lg transition-all duration-200"
+                        className="flex items-center gap-3 w-full px-4 py-3 bg-amber-600 text-white font-semibold hover:bg-amber-700 rounded-lg transition-all duration-200 active:bg-amber-800"
                       >
                         <SettingsIcon className="w-5 h-5 flex-shrink-0" />
                         <span>Admin Panel</span>
@@ -194,10 +196,10 @@ export default function Header() {
                 )}
               </nav>
               {isAuthenticated && (
-                <div className="p-4 border-t border-[#666666]">
+                <div className="p-4 border-t border-[#666666] bg-[#000000]">
                   <button
                     onClick={handleLogout}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-red-600/40"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-red-600/40 active:bg-red-800"
                   >
                     <LogOut className="w-4 h-4" />
                     <span>Logout</span>
