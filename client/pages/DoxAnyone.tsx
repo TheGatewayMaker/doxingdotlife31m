@@ -53,7 +53,7 @@ export default function DoxAnyone() {
           </div>
 
           {/* Instructions Section */}
-          <div className="bg-[#1a1a1a] border-2 border-[#666666] rounded-lg p-4 sm:p-6 mb-6 sm:mb-8">
+          <div className="bg-[#1a1a1a] border-2 border-[#666666] rounded-lg p-4 sm:p-6 mb-6 sm:mb-8 animate-slideInUp" style={{ animationDelay: "0.3s" }}>
             <h2 className="text-lg sm:text-xl font-black mb-4 text-white">
               How It Works
             </h2>
