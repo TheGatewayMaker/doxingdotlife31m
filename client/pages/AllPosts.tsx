@@ -568,21 +568,36 @@ export default function AllPosts() {
                       </p>
                       <div className="flex flex-wrap gap-1 sm:gap-1.5">
                         {post.country && (
-                          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-blue-600/20 text-blue-300">
+                          <span className="inline-flex items-center gap-0.5 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 rounded-full text-xs font-medium bg-[#666666] text-white border border-[#979797] flex-shrink-0">
                             <GlobeIcon className="w-3 h-3" />
-                            {post.country}
+                            <span className="hidden sm:inline">
+                              {post.country}
+                            </span>
+                            <span className="sm:hidden">
+                              {post.country.substring(0, 3)}
+                            </span>
                           </span>
                         )}
                         {post.city && (
-                          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-blue-600/20 text-blue-300">
+                          <span className="inline-flex items-center gap-0.5 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 rounded-full text-xs font-medium bg-[#666666] text-white border border-[#979797] flex-shrink-0">
                             <MapPinIcon className="w-3 h-3" />
-                            {post.city}
+                            <span className="hidden sm:inline">
+                              {post.city}
+                            </span>
+                            <span className="sm:hidden">
+                              {post.city.substring(0, 3)}
+                            </span>
                           </span>
                         )}
                         {post.server && (
-                          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-blue-600/20 text-blue-300">
+                          <span className="inline-flex items-center gap-0.5 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 rounded-full text-xs font-medium bg-[#666666] text-white border border-[#979797] flex-shrink-0">
                             <ServerIcon className="w-3 h-3" />
-                            {post.server}
+                            <span className="hidden sm:inline">
+                              {post.server}
+                            </span>
+                            <span className="sm:hidden">
+                              {post.server.substring(0, 3)}
+                            </span>
                           </span>
                         )}
                       </div>
