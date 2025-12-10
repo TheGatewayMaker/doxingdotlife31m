@@ -312,23 +312,23 @@ export default function AllPosts() {
 
       <main className="flex-1 w-full">
         {/* Hero Section */}
-        <div className="bg-[#000000] pt-8 pb-8 md:pt-16 md:pb-12 border-b border-[#666666]">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-[#000000] py-6 sm:py-10 md:py-16 lg:py-20 border-b border-[#666666]">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
             <div
               className="animate-slideInLeftFade"
               style={{ animationDelay: "0.1s" }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 text-white tracking-tighter leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 sm:mb-4 text-white tracking-tighter leading-tight">
                 All Posts
               </h1>
-              <p className="text-base sm:text-lg md:text-xl font-semibold text-[#979797] mb-6 max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-[#979797] mb-5 sm:mb-6 max-w-2xl leading-relaxed">
                 Browse all the doxed individuals in our database
               </p>
             </div>
 
             {/* Search Bar */}
             <div
-              className="relative mb-4 animate-scaleUpFadeIn"
+              className="relative mb-5 sm:mb-6 animate-scaleUpFadeIn"
               style={{ animationDelay: "0.2s" }}
             >
               <input
@@ -336,9 +336,9 @@ export default function AllPosts() {
                 placeholder="Search Doxed Individuals"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 sm:px-5 py-3 sm:py-3.5 bg-[#1a1a1a] border-2 border-[#666666] hover:border-[#0088CC] rounded-lg text-white placeholder-[#979797] focus:outline-none focus:ring-2 focus:ring-[#0088CC] focus:border-[#0088CC] text-sm sm:text-base transition-all shadow-md hover:shadow-lg hover:shadow-[#0088CC]/30"
+                className="w-full px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-4 bg-[#1a1a1a] border border-[#666666] hover:border-[#0088CC] rounded-lg text-white placeholder-[#979797] focus:outline-none focus:ring-2 focus:ring-[#0088CC] focus:border-[#0088CC] text-sm sm:text-base transition-all shadow-md hover:shadow-lg hover:shadow-[#0088CC]/30 min-h-[44px] touch-target"
               />
-              <Search className="absolute right-4 sm:right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#979797] pointer-events-none" />
+              <Search className="absolute right-3 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#979797] pointer-events-none" />
             </div>
 
             {/* Categories Section */}
@@ -346,7 +346,7 @@ export default function AllPosts() {
               className="mb-0 animate-slideInUp"
               style={{ animationDelay: "0.3s" }}
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 md:gap-4">
                 {/* Country Dropdown */}
                 <div className="relative group">
                   <label className="text-sm font-bold text-white block mb-3 flex items-center gap-2">
