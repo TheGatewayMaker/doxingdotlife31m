@@ -600,10 +600,10 @@ export default function UppostPanel() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {/* Country */}
-                <div>
-                  <label className="block text-sm font-bold mb-3 text-foreground flex items-center gap-2">
+                <div className="animate-slideInLeft" style={{ animationDelay: "0.35s" }}>
+                  <label className="block text-xs sm:text-sm font-bold mb-2 sm:mb-3 text-foreground flex items-center gap-2">
                     <svg
-                      className="w-4 h-4 text-accent"
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -618,16 +618,16 @@ export default function UppostPanel() {
                     type="text"
                     value={country}
                     onChange={(e) => setCountry(e.target.value)}
-                    className="w-full px-4 py-3 bg-background/50 border-2 border-border/60 hover:border-accent/60 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-background/50 border-2 border-border/60 hover:border-accent/60 rounded-lg sm:rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200 text-sm"
                     placeholder="(optional)"
                   />
                 </div>
 
                 {/* City */}
-                <div>
-                  <label className="block text-sm font-bold mb-3 text-foreground flex items-center gap-2">
+                <div className="animate-slideInUp" style={{ animationDelay: "0.37s" }}>
+                  <label className="block text-xs sm:text-sm font-bold mb-2 sm:mb-3 text-foreground flex items-center gap-2">
                     <svg
-                      className="w-4 h-4 text-accent"
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -641,16 +641,16 @@ export default function UppostPanel() {
                     type="text"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    className="w-full px-4 py-3 bg-background/50 border-2 border-border/60 hover:border-accent/60 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-background/50 border-2 border-border/60 hover:border-accent/60 rounded-lg sm:rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200 text-sm"
                     placeholder="(optional)"
                   />
                 </div>
 
                 {/* Server */}
-                <div>
-                  <label className="block text-sm font-bold mb-3 text-foreground flex items-center gap-2">
+                <div className="animate-slideInRight" style={{ animationDelay: "0.39s" }}>
+                  <label className="block text-xs sm:text-sm font-bold mb-2 sm:mb-3 text-foreground flex items-center gap-2">
                     <svg
-                      className="w-4 h-4 text-accent"
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -666,7 +666,7 @@ export default function UppostPanel() {
                     type="text"
                     value={server}
                     onChange={(e) => setServer(e.target.value)}
-                    className="w-full px-4 py-3 bg-background/50 border-2 border-border/60 hover:border-accent/60 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-background/50 border-2 border-border/60 hover:border-accent/60 rounded-lg sm:rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all duration-200 text-sm"
                     placeholder="(optional)"
                   />
                 </div>
