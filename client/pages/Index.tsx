@@ -505,21 +505,28 @@ export default function Index() {
 
           {displayedPosts.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 mb-10 sm:mb-12">
+              <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mb-8 sm:mb-10 md:mb-12">
                 {displayedPosts.map((post, idx) => (
                   <div
                     key={post.id}
                     onClick={() => navigate(`/post/${post.id}`)}
                     className={cn(
-                      "group rounded-xl overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-2 animate-scaleUpFadeIn border hover:shadow-2xl",
+                      "group rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-2 animate-scaleUpFadeIn border hover:shadow-2xl flex flex-col h-full active:scale-95 sm:active:scale-100",
                       post.isTrend
                         ? "bg-gradient-to-br from-[#4a3a1a] via-[#3a2a1a] to-[#2a1a0a] border-[#9d7e1f] hover:border-[#ffd700] hover:shadow-[#ffd700]/20"
                         : "bg-[#1a1a1a] border-[#666666] hover:border-[#0088CC] hover:shadow-[#0088CC]/20",
                     )}
                     style={{ animationDelay: `${idx * 0.08}s` }}
+                    role="link"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        navigate(`/post/${post.id}`);
+                      }
+                    }}
                   >
                     {post.thumbnail && (
-                      <div className="w-full h-40 sm:h-48 bg-[#666666] overflow-hidden flex items-center justify-center relative">
+                      <div className="w-full aspect-square bg-[#1a1a1a] overflow-hidden flex items-center justify-center relative flex-shrink-0">
                         <img
                           src={post.thumbnail}
                           alt={post.title}
@@ -535,32 +542,33 @@ export default function Index() {
                               const errorDiv = document.createElement("div");
                               errorDiv.setAttribute("data-error-shown", "true");
                               errorDiv.className =
-                                "text-center text-[#979797] flex flex-col items-center justify-center gap-2";
+                                "absolute inset-0 bg-[#0a0a0a] text-center text-[#666666] flex flex-col items-center justify-center gap-1 sm:gap-2 w-full h-full";
                               errorDiv.innerHTML =
-                                '<div class="text-4xl">🖼️</div><div class="text-xs">Image unavailable</div>';
+                                '<div class="text-2xl sm:text-3xl">🖼️</div><div class="text-xs">Image unavailable</div>';
                               parent.appendChild(errorDiv);
                             }
                           }}
                           crossOrigin="anonymous"
                           loading="lazy"
+                          decoding="async"
                         />
                       </div>
                     )}
-                    <div className="p-4 sm:p-5">
-                      <div className="flex items-start justify-between gap-2 mb-3">
-                        <h3 className="font-bold text-sm sm:text-base line-clamp-2 flex-1 text-white group-hover:text-[#0088CC] transition-colors">
+                    <div className="p-3 sm:p-4 flex-1 flex flex-col">
+                      <div className="flex items-start justify-between gap-2 mb-2 sm:mb-3">
+                        <h3 className="font-bold text-xs sm:text-sm md:text-base line-clamp-2 flex-1 text-white group-hover:text-[#0088CC] transition-colors">
                           {post.title}
                         </h3>
                         {post.nsfw && (
-                          <span className="inline-flex items-center gap-1 bg-red-600 text-white px-2.5 py-1 rounded-md text-xs font-bold flex-shrink-0 whitespace-nowrap">
+                          <span className="inline-flex items-center gap-0.5 bg-red-600 text-white px-2 sm:px-2.5 py-0.5 sm:py-1 rounded text-xs font-bold flex-shrink-0 whitespace-nowrap">
                             NSFW
                           </span>
                         )}
                       </div>
-                      <p className="text-xs sm:text-sm line-clamp-2 mb-4 text-[#979797]">
+                      <p className="text-xs line-clamp-2 mb-3 sm:mb-4 text-[#979797] flex-1">
                         {post.description}
                       </p>
-                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                      <div className="flex flex-wrap gap-1 sm:gap-1.5">
                         {post.country && (
                           <span className="inline-flex items-center gap-0.5 px-2 sm:px-3 py-1 rounded-full text-xs font-medium bg-[#666666] text-white border border-[#979797]">
                             <GlobeIcon className="w-3 h-3" />
