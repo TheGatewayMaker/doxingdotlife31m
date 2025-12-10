@@ -76,45 +76,16 @@ export default function PostMediaSection({
           </h3>
 
           {/* Responsive Grid Layout */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 md:gap-4">
             {photos.map((photo, idx) => (
-              <div
+              <PhotoCard
                 key={`${photo.name}-${idx}`}
-                className="group relative rounded-lg overflow-hidden border border-[#666666] hover:border-[#0088CC] transition-all duration-300 bg-[#1a1a1a]"
-              >
-                {/* Image Container */}
-                <div className="relative w-full aspect-square overflow-hidden bg-black">
-                  <img
-                    src={photo.url}
-                    alt={photo.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                    crossOrigin="anonymous"
-                  />
-
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <div className="bg-black/80 px-3 py-1.5 rounded text-white text-xs font-medium">
-                      {idx + 1} / {photos.length}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Photo Info and Download Button */}
-                <div className="p-3 sm:p-4 space-y-3 border-t border-[#666666]">
-                  <p className="text-xs sm:text-sm font-semibold text-white truncate">
-                    {photo.name}
-                  </p>
-
-                  <button
-                    onClick={() => handleDownload(photo)}
-                    className="w-full px-3 py-2 bg-[#0088CC] hover:bg-[#0077BB] text-white text-xs sm:text-sm font-medium rounded-lg transition-all active:scale-95 flex items-center justify-center gap-2"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download
-                  </button>
-                </div>
-              </div>
+                url={photo.url}
+                name={photo.name}
+                index={idx}
+                total={photos.length}
+                onDownload={() => handleDownload(photo)}
+              />
             ))}
           </div>
         </div>
