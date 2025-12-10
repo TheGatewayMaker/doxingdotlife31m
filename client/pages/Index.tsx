@@ -462,8 +462,8 @@ export default function Index() {
         </div>
 
         {/* Posts Section */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <div className="mb-10 sm:mb-12 animate-slideInUp">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-10 md:py-12 lg:py-16">
+          <div className="mb-8 sm:mb-10 md:mb-12 animate-slideInUp">
             {isLoadingPosts ? (
               <>
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-3 flex items-center gap-3 text-white">
