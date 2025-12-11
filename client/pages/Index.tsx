@@ -234,7 +234,7 @@ export default function Index() {
                           {post.title}
                         </h3>
                         {post.nsfw && (
-                          <span className="text-red-500 font-black text-sm sm:text-base flex-shrink-0">
+                          <span className="text-[#FF0000] font-black text-sm sm:text-base flex-shrink-0">
                             NSFW
                           </span>
                         )}
