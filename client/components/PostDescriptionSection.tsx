@@ -1,7 +1,7 @@
 import { Copy, Check } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { GlobeIcon, MapPinIcon, ServerIcon } from "@/components/Icons";
+import { GlobeIcon, MapPinIcon, DiscordIcon } from "@/components/Icons";
 import { parseMarkdownBold } from "@/lib/markdown-parser";
 
 interface PostDescriptionSectionProps {
