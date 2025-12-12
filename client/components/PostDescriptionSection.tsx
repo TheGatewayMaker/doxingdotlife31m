@@ -41,20 +41,20 @@ export default function PostDescriptionSection({
           </h3>
           <div className="flex flex-wrap gap-2">
             {tags.country && (
-              <span className="inline-flex items-center gap-2 bg-accent/20 text-accent px-3 py-2 rounded-full text-xs sm:text-sm font-semibold">
-                <GlobeIcon className="w-4 h-4" />
+              <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md text-[#d0d0d0] border border-white/20 px-2.5 py-1 rounded-full text-xs font-semibold hover:bg-white/20 hover:border-accent transition-all">
+                <GlobeIcon className="w-3 h-3" />
                 {tags.country}
               </span>
             )}
             {tags.city && (
-              <span className="inline-flex items-center gap-2 bg-accent/20 text-accent px-3 py-2 rounded-full text-xs sm:text-sm font-semibold">
-                <MapPinIcon className="w-4 h-4" />
+              <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md text-[#d0d0d0] border border-white/20 px-2.5 py-1 rounded-full text-xs font-semibold hover:bg-white/20 hover:border-accent transition-all">
+                <MapPinIcon className="w-3 h-3" />
                 {tags.city}
               </span>
             )}
             {tags.server && (
-              <span className="inline-flex items-center gap-2 bg-accent/20 text-accent px-3 py-2 rounded-full text-xs sm:text-sm font-semibold">
-                <ServerIcon className="w-4 h-4" />
+              <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md text-[#d0d0d0] border border-white/20 px-2.5 py-1 rounded-full text-xs font-semibold hover:bg-white/20 hover:border-accent transition-all">
+                <DiscordIcon className="w-3 h-3" />
                 {tags.server}
               </span>
             )}
