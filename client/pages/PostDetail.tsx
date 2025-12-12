@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import PostDescriptionSection from "@/components/PostDescriptionSection";
 import PostMediaSection from "@/components/PostMediaSection";
 import NSFWWarningModal from "@/components/NSFWWarningModal";
+import ModernLoader from "@/components/ModernLoader";
 import { NSFWIcon } from "@/components/Icons";
 import { Post } from "@shared/api";
 import { toast } from "sonner";
@@ -51,13 +52,8 @@ export default function PostDetail() {
     return (
       <div className="min-h-screen bg-[#000000] text-white flex flex-col animate-fadeIn">
         <Header />
-        <main className="flex-1 w-full flex items-center justify-center px-4">
-          <div className="text-center">
-            <div className="inline-block animate-spin mb-4">
-              <div className="w-14 h-14 border-4 border-[#666666] border-t-[#0088CC] rounded-full"></div>
-            </div>
-            <p className="text-[#979797] text-lg">Loading post...</p>
-          </div>
+        <main className="flex-1 w-full flex flex-col items-center justify-center px-4 py-8 sm:py-12 lg:py-16">
+          <ModernLoader size="lg" text="Loading post..." />
         </main>
         <Footer />
       </div>
